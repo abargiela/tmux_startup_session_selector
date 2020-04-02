@@ -57,6 +57,7 @@ do
             ;;
         *) 
             # Used for vscode run integrated terminal
+            clear
             zsh || bash
             ;;
     esac
