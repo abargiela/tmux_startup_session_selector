@@ -5,6 +5,10 @@
 #In vscode: Open setting.json and add: 
 #"terminal.integrated.shellArgs.osx": ["/path/to/script/tmux_startup_session_selector.sh" ]
 
+#case $1 in
+#    -e) bash &
+#    ;;
+#esac
 return_opened_sessions_names(){
     echo -e "
 Currently opened sessions:
@@ -32,6 +36,7 @@ c - Create a new session
 a - Attach to an existent one
 e - Do not use tmux
 "
+
 while :
 do
   read OPTION
@@ -51,7 +56,8 @@ do
             break
             ;;
         *) 
-            echo "Type a valid option."
+            # Used for vscode run integrated terminal
+            zsh || bash
             ;;
     esac
 done
