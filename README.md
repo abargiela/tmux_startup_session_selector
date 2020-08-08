@@ -16,7 +16,9 @@
 
 In Preferences, go to: `Profiles -> General -> Command ` and choose: `login shell`
 
-And add the path where this script is: `bash ~/Documents/tmux_startup_session_selector/tmux_startup_session_selector.sh`
+And add the path where this script is located: 
+
+`bash ~/Documents/tmux_startup_session_selector/tmux_startup_session_selector.sh`
 
 ## vscode integrated terminal osx configuration
 
