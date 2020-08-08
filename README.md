@@ -1,27 +1,37 @@
 - [Usage:](#usage)
-  - [iterm2:](#iterm2)
-  - [vscode integrated terminal osx](#vscode-integrated-terminal-osx)
+  - [Clone](#clone)
+  - [Iterm2 configuration](#iterm2-configuration)
+  - [vscode integrated terminal osx configuration](#vscode-integrated-terminal-osx-configuration)
   - [Description](#description)
   - [Example](#example)
 
 
+
 # Usage: 
 
-## iterm2:
+## Clone
+`git clone https://github.com/abargiela/tmux_startup_session_selector.git ~/Documents/`
 
-In `Profiles -> General -> Command ` 
+## Iterm2 configuration
 
-choose: `login shell` and add the path where this script is: `bash /path/to/script/tmux_startup_session_selector.sh`
+In Preferences, go to: `Profiles -> General -> Command ` and choose: `login shell`
 
-## vscode integrated terminal osx
+And add the path where this script is: `bash ~/Documents/tmux_startup_session_selector/tmux_startup_session_selector.sh`
 
-Open `setting.json` and add: 
-`"terminal.integrated.shellArgs.osx": ["/path/to/script/tmux_startup_session_selector.sh" ]`
+## vscode integrated terminal osx configuration
+
+Press: `ctrl + shift + P` and write: `Preferences: Open Settings (JSON)` 
+
+Here you have to add the full path, if you kept the suggested structure, just change `YOURUSER` to your username and it will work.
+
+`"terminal.integrated.shellArgs.osx": ["/Users/YOURUSER/Documents/tmux_startup_session_selector/tmux_startup_session_selector.sh" ]`
+
+If it doesn't work just restart vscode.
 
 
 ## Description
 
-The main idea behind this script was to facilitate when I open a new terminal, so I have an easy way to choose a new or an existent session of tmux without type commands, so it's helpful for me, hope it can help you, suggestions are welcome.
+The main idea behind this script was to facilitate when I open a new terminal have an easy way to choose a new/existent/or skip a new session of tmux without type any command, so it's helpful for me, hope it can help you, suggestions are welcome.
 
 
 ## Example
