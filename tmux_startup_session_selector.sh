@@ -17,11 +17,17 @@ $(tmux list-sessions -F '#S')"
 }
 
 attach_session(){
-    read SESSION_NAME
-    tmux attach -t $SESSION_NAME
-    while [[ $? != 0 ]];do
-        attach_session
-    done
+    tmux has
+    if [[ $?  == 1 ]]; then
+        echo "No sessions created yet, please, create one"
+        create_new_session
+    else
+        read SESSION_NAME
+        tmux attach -t $SESSION_NAME
+        while [[ $? != 0 ]];do
+            attach_session
+        done
+    fi
 }
 
 create_new_session(){
