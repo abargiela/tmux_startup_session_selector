@@ -14,7 +14,7 @@
 # Usage: 
 
 ## Clone
-`git clone https://github.com/abargiela/tmux_startup_session_selector.git ~/Documents/`
+`git clone https://github.com/abargiela/tmux_startup_session_selector.git ~/Documents/tmux_startup_session_selector`
 
 
 ## Terminals configuration
